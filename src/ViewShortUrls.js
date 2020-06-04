@@ -5,7 +5,7 @@ const ViewShortUrls = () => {
     const [urlData, setUrlData] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/getallurl")
+        fetch("https://url-shortner-nodejs.herokuapp.com/getallurl")
             .then((res) => res.json())
 
             .then((data) => {
@@ -21,7 +21,7 @@ const ViewShortUrls = () => {
     const urlDelete = (shortid) => {
         //event.preventDefault()
         console.log(shortid)
-        fetch(`http://localhost:3001/deleteurl/` + shortid, {
+        fetch(`https://url-shortner-nodejs.herokuapp.com/deleteurl/` + shortid, {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
@@ -41,8 +41,8 @@ const ViewShortUrls = () => {
                        
                         <p>{url.longurl}</p>
                         <p>
-                            <a href={"http://localhost:3001/" + url.shorturl}
-                                target="_blank">http://localhost:3001/{url.shorturl}
+                            <a href={"https://url-shortner-nodejs.herokuapp.com/" + url.shorturl}
+                                target="_blank">https://url-shortner-nodejs.herokuapp.com/{url.shorturl}
                             </a>
 
                         </p>

@@ -15,7 +15,7 @@ const UrlShortBox = () => {
     }
     const submit = (event) => {
         event.preventDefault()
-        fetch(`http://localhost:3001/generateURL`, {
+        fetch(`https://url-shortner-nodejs.herokuapp.com/generateURL`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
